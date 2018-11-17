@@ -1,0 +1,96 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>Facelet Title</title>
+            
+        <style>
+            .divCards{
+                width: 24%; float: left;
+            }
+        </style>
+    </h:head>
+    <h:body>
+        
+        <h1 align="center" style="color: red;">Gerenciamento Residencial</h1>
+        <h:form style="width: 80%; margin: 0% auto;">
+            <p:growl id="msgs" showDetail="true"/>
+            <p:fieldset legend="Area Externa" toggleable="true" toggleSpeed="500" style="margin: 2% 1%;">
+                <div class="ui-g">
+                    <div class="ui-g-3" align="center">
+                        <p:panel id="luzteto" header="Portão Eletronico">
+                            <img src="assets/gate.png"/><br/>
+                            <hr/>
+                            <p:inputSwitch>
+                                 <p:ajax />
+                             </p:inputSwitch>
+                        </p:panel>
+                    </div>
+                    <div class="ui-g-3" align="center">
+                        <p:panel id="arcond" header="Tranca Eletronica">
+                            <img src="assets/handle.png"/><br/>
+                            <hr/>
+                                <p:inputSwitch>
+                                 <p:ajax />
+                                </p:inputSwitch>
+                        </p:panel>
+                    </div>
+                    <div class="ui-g-3" align="center">
+                        <p:panel id="luzteto" header="Luz Externa">
+                            <img src="assets/light-bulb.png"/><br/>
+                            <hr/>
+                            <p:inputSwitch>
+                                 <p:ajax />
+                             </p:inputSwitch>
+                        </p:panel>
+                    </div>
+                </div>
+               
+            </p:fieldset>
+            <p:fieldset legend="Quarto Principal" toggleable="true" toggleSpeed="500" style="margin: 2% 1%;">
+                <div class="ui-g">
+                    <div class="ui-g-3" align="center">
+                        <p:panel id="luzteto" header="Luz Teto">
+                            <img src="assets/light-bulb.png"/><br/>
+                            <hr/>
+                            <p:inputSwitch>
+                                 <p:ajax />
+                             </p:inputSwitch>
+                        </p:panel>
+                    </div>
+                    <div class="ui-g-3" align="center">
+                        <p:panel id="luzteto" header="Luz Abajur">
+                            <img src="assets/light-bulb.png"/><br/>
+                            <hr/>
+                            <p:inputSwitch>
+                                 <p:ajax />
+                             </p:inputSwitch>
+                        </p:panel>
+                    </div>
+                    <div class="ui-g-3" align="center">
+                        <p:panel id="arcond" header="Ar Condicionado">
+                            <p:graphicImage name="assets/snowflake.png"/>
+                            <img src="assets/snowflake.png"/><br/>
+                            <p:panel style="margin-bottom: 10px">
+                                <p:inputSwitch>
+                                 <p:ajax />
+                                </p:inputSwitch>
+                                <br/>
+                                <h:outputText id="output" value="Temperatura 16ºC" />
+                                <h:inputHidden id="txt2" />
+                                <p:slider for="txt2" minValue="16" maxValue="27" style="width:60px " display="output"  displayTemplate="Temperatura {value}ºC" />
+                            </p:panel>
+                        </p:panel>
+                    </div>
+                </div>
+                
+            </p:fieldset>
+                    
+        </h:form>
+    </h:body>
+</html>
+
